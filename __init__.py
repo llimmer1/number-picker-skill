@@ -7,7 +7,14 @@ class NumberPicker(MycroftSkill):
 
     @intent_file_handler('picker.number.intent')
     def handle_picker_number(self, message):
-        self.speak_dialog('picker.number')
+        number1 = message.data.get('number1')
+        number2 = message.data.get("number2')
+        
+        self.speak_dialog('picker.number', data={
+            'number' : 15
+        })
+        
+        
 
 
 def create_skill():
