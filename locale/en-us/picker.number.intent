@@ -1,3 +1,2 @@
-Pick a number between 1 and 10
-Choose a number between 3 and 8
-Pick a number between 653 and 9104
+Pick a number between {number1} and {number2}
+Choose a number between {number1} and {number2}
