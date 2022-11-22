@@ -8,7 +8,7 @@ class NumberPicker(MycroftSkill):
     @intent_file_handler('picker.number.intent')
     def handle_picker_number(self, message):
         number1 = int(message.data.get('number1'))
-        number2 = int(message.data.get("number2'))
+        number2 = int(message.data.get('number2'))
         
         self.speak_dialog('picker.number', data={
             'number' : random.randint(number1,number2)
