@@ -4,8 +4,13 @@ import random
 class NumberPicker(MycroftSkill):
     def __init__(self):
         MycroftSkill.__init__(self)
-
+        
     @intent_file_handler('picker.number.intent')
+    def initialize(self):
+        self.register_intent_file('picker.number.intent', self.handle_picker_number)
+        self.register_entity_file('number1.entity')
+        self.register_entity_file('number2.entity')
+
     def handle_picker_number(self, message):
         number1 = int(message.data.get('number1'))
         number2 = int(message.data.get('number2'))
