@@ -12,6 +12,7 @@ class NumberPicker(MycroftSkill):
         self.register_entity_file('number2.entity')
 
     def handle_picker_number(self, message):
+        self.log.info(message)
         number1 = int(message.data.get('number1'))
         number2 = int(message.data.get('number2'))
         
